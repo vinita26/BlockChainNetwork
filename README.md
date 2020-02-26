@@ -136,7 +136,6 @@ material-dashboard-react
     │   │   ├── GridContainer.js
     │   │   └── GridItem.js
     │   ├── Navbars
-    │   │   ├── AdminNavbarLinks.js
     │   │   ├── Navbar.js
     │   ├── Sidebar
     │   │   └── Sidebar.js
