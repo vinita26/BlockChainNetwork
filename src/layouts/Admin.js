@@ -67,6 +67,7 @@ export default function Admin({ ...rest }) {
     setMobileOpen(!mobileOpen);
   };
   const getRoute = () => {
+    console.log("Route name:", window.location.pathname)
     return window.location.pathname !== "/admin/maps";
   };
   const resizeFunction = () => {
