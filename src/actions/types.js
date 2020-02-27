@@ -1,0 +1,3 @@
+export const CREATE_PRODUCT = 'CREATE_PRODUCT';
+export const PRODUCT_ERROR = 'PRODUCT_ERROR';
+export const GET_PRODUCTS = 'GET_PRODUCTS';
