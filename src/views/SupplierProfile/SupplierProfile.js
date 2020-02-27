@@ -39,6 +39,18 @@ export default function SupplierProfile() {
         //validateProduct(product);
     };
 
+    const getSuppliers = () => async dispatch => {
+        console.log("inside getSuppliers")
+        try {
+            const res = await fetch('http://ec2-3-87-126-187.compute-1.amazonaws.com:8080/api/Manufacturer');
+            const data = await res.json();
+            console.log("Manufactures data:", data)
+        } catch (error) {
+            console.log('error', error)
+        }
+
+    }
+
     return (
         <div>
             <GridContainer>
@@ -66,7 +78,7 @@ export default function SupplierProfile() {
                                             onChange={handleChange('age')}
                                         // labelWidth={labelWidth}
                                         >
-                                            <option value={1} >Tyres</option>
+                                            <option value={1} >Wheels</option>
                                             <option value={2} >Brakes</option>
                                             <option value={3} >Odometer</option>
                                         </Select>
@@ -79,10 +91,18 @@ export default function SupplierProfile() {
                                 className="checkProduct"
                                 color="info"
                                 round
-                                onChange={addProduct}
+                                onClick={e => addProduct}
                             >
                                 Add Product
-              </Button>
+                             </Button>
+                            <Button
+                                className="checkProduct"
+                                color="info"
+                                round
+                                onClick={getSuppliers}
+                            >
+                                Get suppliers
+                            </Button>
                         </CardBody>
                     </Card>
                 </GridItem>

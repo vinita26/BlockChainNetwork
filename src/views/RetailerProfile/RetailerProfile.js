@@ -66,7 +66,7 @@ export default function RetailerProfile() {
                                             onChange={handleChange('age')}
                                         // labelWidth={labelWidth}
                                         >
-                                            <option value={1} >Tyres</option>
+                                            <option value={1} >Wheels</option>
                                             <option value={2} >Brakes</option>
                                             <option value={3} >Odometer</option>
                                         </Select>

@@ -45,6 +45,7 @@ export default function Admin({ ...rest }) {
   const classes = useStyles();
   // ref to help us initialize PerfectScrollbar on windows devices
   const mainPanel = React.createRef();
+  const attemptedLogin = false;
   // states and functions
   const [image, setImage] = React.useState(bgImage);
   const [color, setColor] = React.useState("blue");
@@ -67,7 +68,6 @@ export default function Admin({ ...rest }) {
     setMobileOpen(!mobileOpen);
   };
   const getRoute = () => {
-    console.log("Route name:", window.location.pathname)
     return window.location.pathname !== "/admin/maps";
   };
   const resizeFunction = () => {
@@ -94,7 +94,9 @@ export default function Admin({ ...rest }) {
     };
   }, [mainPanel]);
   return (
+
     <div className={classes.wrapper}>
+
       <Sidebar
         routes={routes}
         logoText={"Fraud Detector"}
