@@ -43,16 +43,16 @@ export default function Dashboard() {
               <CardIcon color="warning">
                 <Icon>content_copy</Icon>
               </CardIcon>
-              <p className={classes.cardCategory}>Used Space</p>
+              <p className={classes.cardCategory}>Total Products</p>
               <h3 className={classes.cardTitle}>
-                49/50 <small>GB</small>
+                10 <small></small>
               </h3>
             </CardHeader>
             <CardFooter stats>
               <div className={classes.stats}>
-                  <Warning />
+                <Warning />
                 <a href="#pablo" onClick={e => e.preventDefault()}>
-                  Get more space
+                  Add new Product
                 </a>
               </div>
             </CardFooter>
@@ -64,13 +64,13 @@ export default function Dashboard() {
               <CardIcon color="success">
                 <Store />
               </CardIcon>
-              <p className={classes.cardCategory}>Revenue</p>
-              <h3 className={classes.cardTitle}>$34,245</h3>
+              <p className={classes.cardCategory}>Registered Suppliers</p>
+              <h3 className={classes.cardTitle}>345</h3>
             </CardHeader>
             <CardFooter stats>
               <div className={classes.stats}>
                 <DateRange />
-                Last 24 Hours
+                Across the Globe
               </div>
             </CardFooter>
           </Card>
@@ -81,13 +81,13 @@ export default function Dashboard() {
               <CardIcon color="danger">
                 <Icon>info_outline</Icon>
               </CardIcon>
-              <p className={classes.cardCategory}>Fixed Issues</p>
-              <h3 className={classes.cardTitle}>75</h3>
+              <p className={classes.cardCategory}>Total OEM</p>
+              <h3 className={classes.cardTitle}>2</h3>
             </CardHeader>
             <CardFooter stats>
               <div className={classes.stats}>
                 <LocalOffer />
-                Tracked from Github
+                Registered OEM's
               </div>
             </CardFooter>
           </Card>
@@ -98,8 +98,8 @@ export default function Dashboard() {
               <CardIcon color="info">
                 <Accessibility />
               </CardIcon>
-              <p className={classes.cardCategory}>Followers</p>
-              <h3 className={classes.cardTitle}>+245</h3>
+              <p className={classes.cardCategory}>Total Retailers</p>
+              <h3 className={classes.cardTitle}>1245+</h3>
             </CardHeader>
             <CardFooter stats>
               <div className={classes.stats}>
@@ -111,7 +111,7 @@ export default function Dashboard() {
         </GridItem>
       </GridContainer>
       <GridContainer>
-        <GridItem xs={12} sm={12} md={4}>
+        <GridItem xs={12} sm={12} md={6}>
           <Card chart>
             <CardHeader color="success">
               <ChartistGraph
@@ -123,12 +123,12 @@ export default function Dashboard() {
               />
             </CardHeader>
             <CardBody>
-              <h4 className={classes.cardTitle}>Daily Sales</h4>
+              <h4 className={classes.cardTitle}>Products Demand/Supply</h4>
               <p className={classes.cardCategory}>
                 <span className={classes.successText}>
-                  <ArrowUpward className={classes.upArrowCardCategory} /> 55%
+                  <ArrowUpward className={classes.upArrowCardCategory} /> 15%
                 </span>{" "}
-                increase in today sales.
+                increase in demand.
               </p>
             </CardBody>
             <CardFooter chart>
@@ -138,7 +138,7 @@ export default function Dashboard() {
             </CardFooter>
           </Card>
         </GridItem>
-        <GridItem xs={12} sm={12} md={4}>
+        {/* <GridItem xs={12} sm={12} md={4}>
           <Card chart>
             <CardHeader color="warning">
               <ChartistGraph
@@ -151,8 +151,8 @@ export default function Dashboard() {
               />
             </CardHeader>
             <CardBody>
-              <h4 className={classes.cardTitle}>Email Subscriptions</h4>
-              <p className={classes.cardCategory}>Last Campaign Performance</p>
+              <h4 className={classes.cardTitle}>Products Demand/Supply</h4>
+              <p className={classes.cardCategory}>Current Trend</p>
             </CardBody>
             <CardFooter chart>
               <div className={classes.stats}>
@@ -160,8 +160,8 @@ export default function Dashboard() {
               </div>
             </CardFooter>
           </Card>
-        </GridItem>
-        <GridItem xs={12} sm={12} md={4}>
+        </GridItem>*/}
+        <GridItem xs={12} sm={12} md={6}>
           <Card chart>
             <CardHeader color="danger">
               <ChartistGraph
@@ -173,8 +173,8 @@ export default function Dashboard() {
               />
             </CardHeader>
             <CardBody>
-              <h4 className={classes.cardTitle}>Completed Tasks</h4>
-              <p className={classes.cardCategory}>Last Campaign Performance</p>
+              <h4 className={classes.cardTitle}>Total Report Run</h4>
+              <p className={classes.cardCategory}>Yesterday's Performance</p>
             </CardBody>
             <CardFooter chart>
               <div className={classes.stats}>
@@ -183,7 +183,7 @@ export default function Dashboard() {
             </CardFooter>
           </Card>
         </GridItem>
-      </GridContainer>
-    </div>
+      </GridContainer >
+    </div >
   );
 }

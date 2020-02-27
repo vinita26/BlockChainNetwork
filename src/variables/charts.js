@@ -12,7 +12,7 @@ var delays2 = 80,
   durations2 = 500;
 
 // ##############################
-// // // Daily Sales
+// // // Graph1
 // #############################
 
 const dailySalesChart = {
@@ -25,7 +25,7 @@ const dailySalesChart = {
       tension: 0
     }),
     low: 0,
-    high: 50, 
+    high: 50,
     chartPadding: {
       top: 0,
       right: 0,
@@ -35,7 +35,7 @@ const dailySalesChart = {
   },
   // for animation
   animation: {
-    draw: function(data) {
+    draw: function (data) {
       if (data.type === "line" || data.type === "area") {
         data.element.animate({
           d: {
@@ -66,7 +66,7 @@ const dailySalesChart = {
 };
 
 // ##############################
-// // // Email Subscriptions
+// // // Products Demand/Supply
 // #############################
 
 const emailsSubscriptionChart = {
@@ -106,7 +106,7 @@ const emailsSubscriptionChart = {
       {
         seriesBarDistance: 5,
         axisX: {
-          labelInterpolationFnc: function(value) {
+          labelInterpolationFnc: function (value) {
             return value[0];
           }
         }
@@ -114,7 +114,7 @@ const emailsSubscriptionChart = {
     ]
   ],
   animation: {
-    draw: function(data) {
+    draw: function (data) {
       if (data.type === "bar") {
         data.element.animate({
           opacity: {
@@ -144,7 +144,7 @@ const completedTasksChart = {
       tension: 0
     }),
     low: 0,
-    high: 1000, 
+    high: 1000,
     chartPadding: {
       top: 0,
       right: 0,
@@ -153,7 +153,7 @@ const completedTasksChart = {
     }
   },
   animation: {
-    draw: function(data) {
+    draw: function (data) {
       if (data.type === "line" || data.type === "area") {
         data.element.animate({
           d: {

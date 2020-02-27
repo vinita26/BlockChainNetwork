@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import InputLabel from '@material-ui/core/InputLabel';
+import CustomInput from "components/CustomInput/CustomInput.js";
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import GridItem from "components/Grid/GridItem.js";
@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function SimpleSelect() {
+export default function UserProfile() {
   const classes = useStyles();
   const [state, setState] = React.useState({
     product_type: ''
@@ -51,7 +51,7 @@ export default function SimpleSelect() {
       <GridContainer>
         <GridItem xs={12} sm={12} md={8}>
           <Card>
-            <CardHeader color="primary">
+            <CardHeader color="info">
               <h4 className={classes.cardTitleWhite}>Detect Product</h4>
               <p className={classes.cardCategoryWhite}>Provide Product ID to verify</p>
             </CardHeader>
@@ -64,7 +64,7 @@ export default function SimpleSelect() {
 
                 <GridItem xs={6} sm={6} md={6}>
                   <FormControl className={classes.formControl}>
-                    <InputLabel id="product-type-label">Product Type</InputLabel>
+                    <option value="" disabled>Select Product Type</option>
                     <Select
                       native
                       labelId="product-type-label"
@@ -73,9 +73,9 @@ export default function SimpleSelect() {
                       onChange={handleChange('age')}
                     // labelWidth={labelWidth}
                     >
-                      <option value={1}>Tyres</option>
-                      <option value={2}>Brakes</option>
-                      <option value={3}>Odometer</option>
+                      <option value={1} >Tyres</option>
+                      <option value={2} >Brakes</option>
+                      <option value={3} >Odometer</option>
                     </Select>
 
                   </FormControl>
@@ -89,17 +89,19 @@ export default function SimpleSelect() {
 
                 <GridItem xs={6} sm={6} md={6}>
                   <FormControl className={classes.formControl}>
-                    <InputLabel id="demo-simple-select-label">Product ID</InputLabel>
-
-
-
-
+                    <CustomInput
+                      labelText="Product ID"
+                      id="product-id"
+                      formControlProps={{
+                        fullWidth: true
+                      }}
+                    />
                   </FormControl>
                 </GridItem>
               </GridContainer>
               <Button
                 className="checkProduct"
-                color="primary"
+                color="info"
                 round
                 onChange={validateProduct}
               >
